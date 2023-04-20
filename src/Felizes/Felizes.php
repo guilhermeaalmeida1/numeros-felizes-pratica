@@ -11,9 +11,6 @@ class Felizes
     {
     }
 
-    /**
-     * @return false|int|void
-     */
     public function somaResultado()
     {
         $soma = 0;
@@ -25,7 +22,7 @@ class Felizes
         $dadoNumeroQualquer = str_split($this->dadoNumeroQualquer);
 
         foreach ($dadoNumeroQualquer as $numeroQualquer) {
-            if (in_array($numeroQualquer, $this->numeroAnterior)){
+            if (in_array($numeroQualquer, $this->numeroAnterior)) {
                 return false;
             }
 
@@ -41,10 +38,6 @@ class Felizes
         $this->somaResultado();
     }
 
-    /**
-     * @param mixed $item
-     * @return int
-     */
     public function elevaNumero(int $item): int
     {
         return pow($item, 2);
